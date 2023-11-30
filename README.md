@@ -8,7 +8,7 @@ Specs: i5-1035G1 CPU @ 1.00GHz   1.19 GHz, 8.00 GB RAM
 
 |Tipas|1000000|10000000|
 |---|---|---|
-|Struct|89.665 s|1210.51 s|
+|Struct|121.655 s|1315.23 s|
 |Class|139.537 s|1771.64 s|
 
 Optimizavimo flagu greiciu lentele:
@@ -22,6 +22,11 @@ Optimizavimo flagu greiciu lentele:
 Class testavimo greitis
 
 ![image](https://github.com/MartynasTap/2.0/assets/145481815/840968c0-b35a-4854-a60a-5f92a9999feb)
+
+Struct testavimo greitis
+
+![image](https://github.com/MartynasTap/2.0/assets/145481815/6404e45f-8501-439e-bbb5-7a0ef0f5b608)
+
 
 O1 flago testavimo greitis
 
