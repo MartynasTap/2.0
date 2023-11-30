@@ -219,7 +219,6 @@ int main()
             grupe.reserve(10000000);
             skaitymas(grupe, nd, "stud10000000.txt");
             grupe.shrink_to_fit();
-            cout << "Po skaitymo " << grupe.capacity() << " " << grupe.size() << endl;
             diff = std::chrono::high_resolution_clock::now() - start;
             cout << "Duomenu nuskaitymas is 10000000 eiluciu failo uztruko: " << diff.count() << endl;
             for (auto& a : grupe) { galutinis_vid(a); galutinis_med(a); }
