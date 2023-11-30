@@ -5,6 +5,9 @@ Programa perrasyta nuo pagrindu vietoj struct naudojant tik class Studentas. Kla
 Sios programos testavimui naudotas kitas kompiuteris, todel laikai skiriasi nuo ansktesniu. Testavimui naudoti duomenu failai liko tie patys.
 
 Specs: i5-1035G1 CPU @ 1.00GHz   1.19 GHz, 8.00 GB RAM
-
+---
+|Tipas|1000000|10000000|
+|Struct| | |
+|Class| | |
 ![image](https://github.com/MartynasTap/2.0/assets/145481815/840968c0-b35a-4854-a60a-5f92a9999feb)
 
