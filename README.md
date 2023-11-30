@@ -13,10 +13,11 @@ Specs: i5-1035G1 CPU @ 1.00GHz   1.19 GHz, 8.00 GB RAM
 
 |Flagas|1000000|10000000|Failo dydis|
 |---|---|---|---|
-|O1| | | |
+|O1| | |186 KB|
 |O2| | | |
 |O3(OX)| | | |
 
 
 ![image](https://github.com/MartynasTap/2.0/assets/145481815/840968c0-b35a-4854-a60a-5f92a9999feb)
+
 
