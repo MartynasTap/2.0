@@ -193,6 +193,7 @@ void ivedimas(vector<Studentas>& Temp, int nd, string failas) {
             fr >> eg;
             laikinas.setEgz(eg);
             Temp.push_back(laikinas);
+            laikinas.EmptyND();
         }
         fr.close();
     }

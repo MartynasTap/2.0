@@ -45,7 +45,6 @@ private:
     int Egzaminas_;
     double rez_vid_;
     double rez_med_;
-    //char* cstring;
 public:
     Studentas() : ND_(0),rez_med_(0),rez_vid_(0),Egzaminas_(0){};
     void setVar(std::string);
