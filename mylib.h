@@ -66,8 +66,12 @@ public:
     void sorting(int);
     friend std::istream& operator>>(std::istream& in, Studentas& a) {
         in >> a.Vardas_ >> a.Pavarde_;
+        return in;
+    }
+    /*friend std::istream& operator>>(std::istream& in, Studentas& a) {
+        in >> a.Vardas_ >> a.Pavarde_;
         while (1)
-        {
+        /*{
             int nd;
             in >> nd;
             a.ND_.push_back(nd);
@@ -76,11 +80,11 @@ public:
             {
                 a.Egzaminas_ = nd;
                 a.ND_.pop_back();
-                break;
-            }
+                break;*/
+            /* }
         }
         return in;
-    }
+    }*/
     friend std::ostream& operator<<(std::ostream& out, const Studentas& a) {
         out << std::fixed;
         out << setw(15) << left <<  a.Vardas_ << setw(15) << left << a.Pavarde_ << setw(17) << left << setprecision(2) << a.rez_vid_ << setw(17) << left << setprecision(2) << a.rez_med_ << "\n";

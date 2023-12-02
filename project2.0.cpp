@@ -22,7 +22,7 @@ int main()
             iv_ir_tikr(h);
             h = ar_tinkamas_pasirinkimas(h);
             if (h == 1) { isvedimas(grupe, "rez1.txt"); }
-            else { isvedimas(grupe); }
+            else {isvedimas(grupe); }
         }
         else {
             int g;

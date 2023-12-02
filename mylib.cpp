@@ -109,10 +109,7 @@ bool comparePagalVarda(const Studentas& x, const Studentas& y)
 }
 void ivedimas(Studentas& Temp) {
     cout << "Iveskite varda ir pavarde: ";
-    string a, b;
-    cin >> a >> b;
-    Temp.setVar(a);
-    Temp.setPav(b);
+    cin >> Temp; //ivestis rankiniu budu
     int i = 0;
     while (1) {
         int paz, n;
@@ -153,9 +150,7 @@ void galutinis_med(Studentas& Temp) {
 }
 void ivedimas(Studentas& Temp, int nd) {
     cout << "Iveskite varda ir pavarde: ";
-    string a,b;
-    cin >> a >> b;
-    Temp.setVar(a); Temp.setPav(b);
+    cin >> Temp;
     srand((unsigned)time(NULL));
     for (int i = 0; i < nd; i++) {
         int k = 1 + (rand() % 10);
@@ -169,10 +164,11 @@ unsigned int zodziai(string const& str)
     return std::distance(std::istream_iterator<string>(stream), std::istream_iterator<string>());
 }
 void ivedimas(vector<Studentas>& Temp, int nd, string failas) {
-    int temp,eg;
+    int temp, eg;
     int stud = 0;
     string buff;
     ifstream fr;
+    Studentas laikinas;
     try
     {
         fr.open(failas);
@@ -182,25 +178,21 @@ void ivedimas(vector<Studentas>& Temp, int nd, string failas) {
         nd = zodziai(buff) - 3;
         while (true)
         {
-            Temp.resize(Temp.size() + 1);
-            string a,b;
-            fr >> a;
-            Temp.at(stud).setVar(a);
+            fr >> laikinas; // ivedimas is failo
             if (fr.eof())
             {
                 Temp.pop_back();
                 break;
             }
-            fr >> b;
-            Temp.at(stud).setPav(b);
             for (int i = 0; i < nd; i++)
             {
-                fr >> temp;
-                Temp.at(stud).setND(temp);
+                int n;
+                fr >> n;
+                laikinas.setND(n);
             }
             fr >> eg;
-            Temp.at(stud).setEgz(eg);
-            stud += 1;
+            laikinas.setEgz(eg);
+            Temp.push_back(laikinas);
         }
         fr.close();
     }
@@ -210,8 +202,7 @@ void isvedimas(vector<Studentas>& Temp) {
     printf("%-15s%-15s%-17s%-17s\n", "Vardas", "Pavarde", "Galutinis (Vid.)", "Galutinis (Med.)");
     printf("----------------------------------------------------------------\n");
     for (auto& a : Temp) {
-        cout << setw(15) << left << a.getVar() << setw(15) << left << a.getPav();
-        printf("%-17.2f%-17.2f\n", a.getVid(), a.getMed());
+        cout << a; //isvedimas i ekrana
     }
 }
 void isvedimas(Studentas& Temp, float galutinis) {
@@ -224,7 +215,7 @@ void isvedimas(vector <Studentas>& Temp, string failas) {
     fr << setw(15) << left << "Vardas" << setw(15) << left << "Pavarde" << setw(17) << left << "Galutinis (Vid.)" << setw(17) << left << "Galutinis (Med.)" << endl;
     fr << "----------------------------------------------------------------" << endl;
     for (auto& a : Temp) {
-        fr << a;
+        fr << a; //isvedimas i faila
     }
     fr.close();
 }
