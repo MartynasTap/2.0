@@ -1,4 +1,23 @@
 #include "mylib.h"
+
+Studentas::Studentas(const Studentas& OldClass) {
+    Vardas_ = OldClass.Vardas_;
+    Pavarde_ = OldClass.Pavarde_;
+    ND_ = OldClass.ND_;
+    Egzaminas_ = OldClass.Egzaminas_;
+    rez_vid_ = OldClass.rez_vid_;
+    rez_med_ = OldClass.rez_med_;
+}
+Studentas& Studentas::operator=(const Studentas& s)
+{
+    if (&s == this)
+        return *this;
+    Vardas_ = s.getVar();
+    Pavarde_ = s.getPav();
+    rez_med_ = s.getMed();
+    rez_vid_ = s.getVid();
+    return *this;
+}
 void Studentas::setVar(string vardas_)
 {
     Vardas_ = vardas_;
@@ -226,7 +245,6 @@ void rusiavimas(vector <Studentas>& Prad, vector <Studentas>& vargsiukai) {
         i++;
     } while (Prad.at(i).getVid() < 5);
     vargsiukai.reserve(i);
-    int j = Prad.size() - i;
     for (int f = 0; f < i; f++) {
         vargsiukai.push_back(Prad.at(f));
     }

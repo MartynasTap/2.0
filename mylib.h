@@ -89,7 +89,8 @@ public:
         out << setw(15) << left <<  a.Vardas_ << setw(15) << left << a.Pavarde_ << setw(17) << left << setprecision(2) << a.rez_vid_ << setw(17) << left << setprecision(2) << a.rez_med_ << "\n";
         return out;
     }
-
+    Studentas(const Studentas&);
+    Studentas& operator=(const Studentas& s);
     ~Studentas() { ND_.clear();};
 };
 bool compare(const Studentas&, const Studentas&);
