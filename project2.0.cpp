@@ -3,7 +3,7 @@ int main()
 {
     vector <Studentas> grupe;
     Studentas laikinas;
-    Person laikinas;
+    //Person laikinas;
     int l, k;
     cout << "Jei norite automatinio failu generavimo, dvieju grupiu surusiavimo ir laiko matavimo iveskite 1. Jei ne, iveskite 0: ";
     iv_ir_tikr(k);
